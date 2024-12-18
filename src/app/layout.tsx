@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -86,7 +87,7 @@ export const metadata: Metadata = {
     maximumScale: 5,
   },
   verification: {
-    google: 'google-site-verification-code', // Add your Google verification code
+    google: 'google-site-verification-code',
   },
   category: 'finance',
 }
@@ -112,9 +113,7 @@ export default function RootLayout({
         <main className="flex-grow">
           {children}
         </main>
-        <footer className="w-full bg-black/50 backdrop-blur-sm p-4 text-center text-white/70">
-          Desenvolvido por <a href="https://github.com/kleeedolinux" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 transition-colors">Klee</a>
-        </footer>
+        <Footer />
         <Analytics />
       </body>
     </html>
