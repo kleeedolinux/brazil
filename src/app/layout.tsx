@@ -108,9 +108,11 @@ export default function RootLayout({
         <meta name="theme-color" content="#000000" />
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={inter.className}>
-        {children}
-        <footer className="fixed bottom-0 w-full bg-black/50 backdrop-blur-sm p-4 text-center text-white/70">
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <main className="flex-grow">
+          {children}
+        </main>
+        <footer className="w-full bg-black/50 backdrop-blur-sm p-4 text-center text-white/70">
           Desenvolvido por <a href="https://github.com/kleeedolinux" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 transition-colors">Klee</a>
         </footer>
         <Analytics />
